@@ -1,0 +1,38 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Configurações do usuário para o AluguelZN.">
+    <title>Configurações - AluguelZN</title>
+    <link rel="stylesheet" href="{% static 'css/configuracoes.css' %}">
+</head>
+<body>
+
+    <div class="config-container">
+        <h2>Configurações</h2>
+
+        <form action="{% url 'configurações' %}" method="POST">
+            {% csrf_token %}
+            <label for="first_name">Nome:</label>
+            <input type="text" name="first_name" placeholder="Nome">
+            
+            <label for="last_name">Sobrenome:</label>
+            <input type="text" name="last_name" placeholder="Sobrenome">
+            
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Email">
+            
+            <label for="nova_senha">Nova Senha:</label>
+            <input type="password" name="nova_senha" placeholder="Nova Senha">
+            
+            <button type="submit" value="Atualizar">Atualizar</button>
+        </form>
+        
+    </div>
+
+    <script src="configuracoes.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de listagem de imóveis para aluguel na Zona Norte.">
+    <meta name="keywords" content="imóveis, aluguel, Zona Norte, propriedades">
+    <title>Aluguel Fácil</title>
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <a href="{% url 'home' %}"><img src="{% static 'img/logoo.png' %}" alt="Logo da Aluguel Fácil"></a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'home' %}">Início</a></li>
+                <li><a href="{% url 'sobre' %}">Sobre nós</a></li>
+                <li><a href="{% url 'parceiro' %}">Contato</a></li>
+                <li><a href="casas.html">Casas</a></li>
+
+            </ul>
+        </nav>
+        <div class="user-icon">
+            <img src="{% static 'img/perfil.png' %}" alt="Ícone de usuário" onclick="toggleDropdown()">
+            <div id="userDropdown" class="dropdown-content">
+                <a href="{% url 'perfil' %}">Perfil</a>
+                <a href="{% url 'configurações' %}">Configurações</a>
+                <a href="{% url 'login' %}" onclick="logoutUser()">Sair</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="pesquisa">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Buscar por preço, tamanho, contato">
+                <select id="filter">
+                    <option value="all">Todos</option>
+                    <option value="low-price">Até R$ 500</option>
+                    <option value="medium-price">R$ 500 - R$ 800</option>
+                    <option value="high-price">Acima de R$ 800</option>
+                </select>
+                <button onclick="searchProperties()">🔍</button>
+            </div>
+        </section>
+
+        <section class="imoveis">
+            <h2>Propriedades em Destaque</h2>
+            <div id="propertyList" class="property-list"></div>
+        </section>
+
+        <div id="propertyModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <img id="modalImage" src="" alt="Imagem do Imóvel">
+                <p id="modalDescription"></p>
+                <a id="modalLink" href="" target="_blank">Ver mais detalhes</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Aluguel Fácil - Todos os direitos reservados © 2024</p>
+    </footer>
+
+    <!-- Arquivo JavaScript -->
+    <script src="js/pj.js" defer></script>
+</body>
+</html>

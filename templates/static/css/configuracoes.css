@@ -1,0 +1,116 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Cor clara padrão */
+    color: #333; /* Cor do texto padrão */
+    margin: 0;
+    padding: 0;
+}
+
+body.dark-mode {
+    background-color: #333; /* Cor escura para o modo escuro */
+    color: #f4f4f4; /* Cor do texto clara para o modo escuro */
+}
+
+.config-container {
+    background-color: #fff; /* Cor do contêiner padrão */
+    max-width: 600px; 
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .config-container {
+    background-color: #444; /* Cor do contêiner no modo escuro */
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #555;
+    padding-bottom: 5px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="color"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none; /* Remove a borda padrão */
+    border-radius: 4px;
+    box-sizing: border-box;
+    outline: none; /* Remove a borda de foco */
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode input[type="email"],
+body.dark-mode input[type="password"],
+body.dark-mode input[type="color"],
+body.dark-mode select {
+    background-color: #666; /* Fundo escuro para inputs no modo escuro */
+    color: #f4f4f4; /* Texto claro */
+}
+
+button {
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px;
+    border: none; /* Remove a borda */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+button:hover {
+    background-color: #1a5a8a;
+    transform: scale(1.05);
+}
+
+button:focus,
+input:focus,
+select:focus {
+    outline: none; /* Remove a borda de foco */
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #2980b9;
+    color: #fff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.message {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid;
+    border-radius: 5px;
+}
+
+.success {
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+    color: #155724;
+}
+
+.danger {
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+    color: #721c24;
+}

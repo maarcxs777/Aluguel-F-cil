@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós</title>
+    <link rel="stylesheet" href="{% static 'css/sobre.css' %}">
+</head>
+<body>
+    <div class="header">
+        <a href="{% url 'home' %}"><img src="{% static 'img/logoo.png' %}" alt="Logo"></a>
+        
+    </div>
+
+    <div class="content">
+        <div class="text">
+            <p>Estamos localizados na Zona Norte de Natal e estamos aqui para ajudar você a alugar sua casa de forma rápida e segura.</p>
+            <p>Com nossa experiência e conhecimento do mercado local, oferecemos um suporte completo para proprietários que desejam rentabilizar seus imóveis sem complicações. Seja para encontrar inquilinos ideais ou para gerenciar todo o processo de locação, estamos prontos para facilitar essa jornada para você.</p>
+            <p>Confie em quem conhece a Zona Norte e quer ver sua casa gerando bons frutos!</p>
+        </div>
+
+        <div class="chart">
+            <h2>Atuação:</h2>
+            <div class="image-container">
+                <img src="{% static 'img/grafico.png' %}" alt="grafico">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

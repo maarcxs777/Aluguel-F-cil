@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contatos e Parceiros</title>
+    <link rel="stylesheet" href="{% static 'css/contatos.css' %}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="info">
+            <p>Confie em quem conhece a Zona Norte e quer ver sua casa gerando bons frutos!</p>
+            <div class="contact">
+                <p>Contato: (84) 00000-0000</p>
+                <p>Email: Znaluguel.com.br</p>
+            </div>
+        </div>
+        <div class="partners">
+            <h2>Parceiros</h2>
+            <form action="" method="POST">
+                {% csrf_token %}
+
+                <input type="text" name="nome" placeholder="Nome Completo">
+                <input type="email" name="email"  placeholder="Email">
+                <input type="text" name="telefone" placeholder="Telefone">
+
+                <button type="submit" value="Enviar">Enviar</button>
+            </form>
+            <p>Campo exclusivo para clientes que desejam divulgar seus imóveis</p>
+            <!-- Botão para redirecionar para a página de anúncio -->
+        </div>
+    </div>
+
+    <footer>
+        <div>
+            Atendimento<br>
+            <a href="atendimento.html" style="color: #fff;">Central de Ajuda</a><br>
+            
+            <a href="cancelamento.html" style="color: #fff;">Opções de Cancelamento</a>
+        </div>
+        <div>
+            Hospedagem<br>
+            Anuncie sua casa aqui<br>
+            Diretrizes
+        </div>
+        <div>Políticas de privacidade</div>
+    </footer>
+    
+</body>
+</html>

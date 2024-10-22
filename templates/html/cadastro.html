@@ -1,0 +1,53 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/cadastro.css' %}"> <!-- Link para o arquivo CSS -->
+    <title>Cadastro</title>
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-box">
+            <img src="{% static 'img/logo.png' %}" alt="Logo" style="display: block; margin: 0 auto 20px; width: 100px;">
+            <h2>Cadastre-se</h2>
+            <form action="{% url 'cadastro' %}" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="first_name">Primeiro Nome</label>
+                    <input type="text" id="first_name" name="first_name" placeholder="Primeiro Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Segundo Nome</label>
+                    <input type="text" id="last_name" name="last_name" placeholder="Segundo Nome" required>
+                </div>
+                <div class="form-group">
+                    <label for="username">Nome de Usuário</label>
+                    <input type="text" id="username" name="username" placeholder="Defina o nome para o seu usuário" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                </div>
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Senha" required>
+                    <small>● Deve ter pelo menos 8 caracteres</small>
+                </div>
+                <div class="terms-group">
+                    <input type="checkbox" id="terms" name="terms" required>
+                    <label for="terms">Você concorda com os nossos termos e condições</label>
+                </div>
+                <div class="login">
+                    <span>Se você já possui uma conta, faça o seu <a href="{% url 'login' %}" style="color: #007BFF; text-decoration: underline;">Login</a></span>
+                </div>
+                <button type="submit" id="botao">Cadastre-se</button>
+            </form>
+        </div>
+    </div>
+    <script src="{% static 'js/cadastro.js' %}"></script>
+</body>
+</html>

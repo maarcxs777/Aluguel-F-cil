@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; /* Cor clara padrão */
+    color: #333; /* Cor do texto padrão */
+    margin: 0;
+    padding: 0;
+}
+
+body.dark-mode {
+    background-color: #333; /* Cor escura para o modo escuro */
+    color: #f4f4f4; /* Cor do texto clara para o modo escuro */
+}
+
+.perfil-container {
+    background-color: #fff; /* Cor do contêiner padrão */
+    max-width: 600px; 
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .perfil-container {
+    background-color: #444; /* Cor do contêiner no modo escuro */
+}
+
+h2 {
+    color: #333;
+    text-align: center;
+}
+
+h3 {
+    margin-top: 20px;
+    color: #555;
+    padding-bottom: 5px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+strong {
+    color: #2980b9; /* Cor para os rótulos fortes */
+}
+
+a {
+    display: inline-block;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #2980b9;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none; /* Remove sublinhado */
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+a:hover {
+    background-color: #1a5a8a;
+    transform: scale(1.05);
+}
+
+body.dark-mode a {
+    background-color: #5a8fbb; /* Cor do link no modo escuro */
+}
